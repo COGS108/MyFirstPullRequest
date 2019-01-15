@@ -1,0 +1,1 @@
+This is my file for the git part of COGS108 Assignment 1
