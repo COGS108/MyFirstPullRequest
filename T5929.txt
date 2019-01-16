@@ -1,0 +1,1 @@
+You are going to add a txt file with a unique identifier, made up of the First Letter of your last name + the last 4 digits of your Student ID. For example, John Smith - A12345678 should submit ‘S5678.txt’. The contents of this file do no matter (it can be empty). Add this file to your cloned repository (the folder on your computer)
