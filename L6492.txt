@@ -1,0 +1,2 @@
+This belongs to part 1 of the first assignment
+Cogs 108 - Data Science in Practice, winter 2019
