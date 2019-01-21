@@ -1,0 +1,5 @@
+Name: Nareg Hovasapian
+PID: U07313790
+Class: COGS 108
+Professor: Christopher Keown
+Term: Winter 2019
