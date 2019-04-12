@@ -1,0 +1,12 @@
+My mom hates python
+ NTUSER.DAT{409ef50d-4ab9-11e9-8ca1-82f987793f5e}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+ Pictures/
+ PrintHood@
+ Projects/
+ Q4.png
+ Recent@
+'Saved Games'/
+ Searches/
+
