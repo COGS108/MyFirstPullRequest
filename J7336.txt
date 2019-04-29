@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+This is test case for J7336.txt
+=======
+Test case from github
+>>>>>>> 0a78e92f7ad6b955087e23b89ea367ccfbc46ec9
