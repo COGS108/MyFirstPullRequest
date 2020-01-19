@@ -1,0 +1,4 @@
+First assignment for COGS 108
+
+Txt in MyFirstPullRequest
+Last initial + last 4 digit of PID
