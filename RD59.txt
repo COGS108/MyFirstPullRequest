@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 # MyFirstPullRequest
 To be used for the assignments in Cogs 108
+=======
+
+>>>>>>> b8dc8110364083511a467f89d2054afbd0f671fa
+This is a test
