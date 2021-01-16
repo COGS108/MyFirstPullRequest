@@ -1,2 +1,2 @@
 # MyFirstPullRequest
-To be used for the assignments in Cogs 108
+To be use for the assignments in Cogs 108
