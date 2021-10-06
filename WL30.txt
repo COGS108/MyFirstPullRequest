@@ -1,0 +1,503 @@
+﻿PA 1: Intro to Java
+Due: October 4th, Monday, 11:59 pm
+100 points
+
+
+Overview
+For the first assignment, you will begin by setting up your development environment for the rest of the quarter. We will be programming in Java using IntelliJ as our IDE. Additionally, we will use Git to handle version control. 
+
+
+This assignment is an individual assignment. You may ask Professors/TAs/Tutors for some guidance and help, but you can’t copy code. You may discuss the assignment conceptually with your classmates, including bugs that you ran into and how you fixed them. However, do not look at or copy code. This constitutes an Academic Integrity Violation.
+
+
+For this quarter, TA/tutors will offer their office hours online. Please read this guide for how to get help from these online office hours.
+
+
+START EARLY!
+
+
+Part 0 - Agreement and Quiz 0
+Total: 2 points
+
+
+1. Integrity of Scholarship Agreement (1 point)
+Before starting the homework, please carefully read and fill out the integrity of scholarship agreement form. You will not receive scores in this class until you submit the form.
+
+
+2. Quiz 0 (1 point)
+Log in to Canvas and take Quiz 0. Make sure you understand how to find and take it. All reading quizzes will be there (unless zybook activity is assigned), although the deadline will be different for each quiz. The deadline for this quiz is the same as PA 1.
+________________
+
+
+Part 1 - Setup
+Total: 4 points
+
+
+1. Java
+First, you will need to install Java onto your computer. You will do this by installing JDK 8 (Java Standard Edition Development Kit) from Oracle. Scroll down to find the latest release of JDK (8u281) and choose to download the file appropriate for your system (most likely x64 unless you have a really old computer). Accept the license agreement and register/login to an Oracle account when prompted.
+
+
+  
+
+
+
+If your computer already has Java installed, you can skip this step. However, if your Java version is higher, make sure your work is compatible with Java 8 (gradescope will complain when it’s not).
+
+
+2. IntelliJ
+Next, install IntelliJ from JetBrains. This will be your IDE (Integrated Development Environment) for this quarter, and will be how you write and run Java programs. We will use the community edition, so please press the black download button. You can keep the default settings during the installation.
+  
+
+
+
+
+
+During your first run, you will be prompted to select a theme, choose keymaps, create a launcher script, and choose plugins. Either theme is fine. You can use the default settings when choosing the keymaps and leave the launcher script section blank. By default, the necessary plugins are enabled, but at the minimum, you will need:  
+
+
+* Build Tools
+   * Ant
+* Version Controls
+   * Git
+* Test Tools
+   * JUnit
+
+
+Since you will be graded on style, you can also install a plugin to check your style. This recommended plugin comes courtesy of UC Berkeley’s CS 61B course but will work for DSC 30.
+        
+3. Git
+In this course, we will enforce usage of Github to submit your assignment on gradescope. Please follow this guide to set up your git. This guide will help you to create and submit your first java project. You will be turning in HelloWorld.java for this part of your PA.
+
+
+After setting up your github account and github repository, you will now need to acquire the startercode files. Please follow this guide to understand the exact steps of downloading startercode files and integrating them into your Intellij project.
+
+
+To summarize the entire process, here are the basic steps:
+1. Github setup guide(First link)
+   1. Set up a new github repository as dsc30-pa1 in your own account. MAKE IT PRIVATE!
+   2. Git clone in the desired location within your local computer
+   3. Set up Intellij and create a new project within Intellij (select the location to be the same location as your dsc30-pa1 repository)
+   4. Create “HelloWorld.java”
+2. Github StarterCode clone guide(Second link)
+   1. In another location on your computer, download the Github repository for the startercode. Make sure that you do it out of the dsc30-pa1 repository. 
+   2. Find the PA1 folder within the downloaded folder. Drag all of the files into the src folder within your IntelliJ project
+   3. You are ready to go ! Code often, and push your code into Github often! (Follow first link for more details on how to push your code on github)
+________________
+
+
+Part 2 - Startup
+
+
+First, read the Java crash course. You might want to use it as a reference for your future PAs. For details on how to read java documentation and utilize corresponding methods, please refer to the java documentation guide.
+
+
+Style Requirements 
+Total: 10 points
+
+
+You will be graded for the style of programming on every assignment. Each assignment will have about 10 points just for the style of your code, so make sure you read through this part and strictly follow the style requirements when writing your PAs. You may find the style guide on the course website.
+
+
+This is a complete Java style guide: Java Style Guide written by Alan Yao from UC Berkeley. 
+
+
+Implement methods in Java
+
+
+Now that you have learned how to create and run a simple program in Java using IntelliJ, make a new class called Startup in your PA1 project. (Just like how you created HelloWorld class). Note that some of the problems are taken from DSC 20 labs and assignments, so you can use your Python solutions and change them to work with Java syntax.
+
+
+For class Startup, you are allowed to import Java packages, including java.Lang and java.util.*. Also, you may assume that all parameters will not be null. When you write the methods, make sure your method signature is exactly the same as in the write-up, otherwise, you might lose points for this question since the autograder cannot find the method. Whenever there are questions that require a number to be rounded to some decimal places, please use String.format instead of DecimalFormat.
+
+
+Write the following methods inside class Startup:
+________________
+
+
+
+
+# 1
+public static String convertUnits(int option, String currentUnit, double value)
+	
+
+
+
+The US is known for its unusual metric system and those who did not grow up here often get confused with them. Write a conversion function that takes in three parameters:
+* option: This parameter determines which measurement you’ll be using
+   * option=1 for selecting weight metrics
+   * option=2 for selecting distance metrics
+* currentUnit: The unit of measurement for the corresponding value
+   * Weight metrics: kg, gram, pound and ounce
+      * 1kg=1000 gram = 2.20462 pounds = 35.274 ounce
+   * Distance Metrics: meter, mile, yard and foot
+      * 1 mile = 1609.34 meter = 1760 yard = 5280 feet
+   * Note: All metric inputs will be lowercase. Metric inputs other than those shown above don’t need to be considered. 
+* Value: The numerical value of a measurement
+
+
+You’ll be implementing the conversion of other units within the same metric and return an output string that concatenates all conversion units and corresponding values, rounded to two decimal places, in the following exact order and format: 
+For grading purposes, please use “pounds” instead of “pound.” Ignore inconsistency of singular/plural. 
+
+
+(option = 1, currentUnit = “gram”, value = 1001)
+kg: 1.00
+gram: 1001.00
+pounds: 2.21
+ounce: 35.31
+
+
+
+
+Examples: 
+option
+	currentUnit
+	value
+	Output
+	1
+	gram
+	1001
+	“kg: 1.00
+gram: 1001.00
+pounds: 2.21
+ounce: 35.31”
+	2
+	mile
+	1
+	“meter: 1609.34
+mile: 1.00
+yard: 1760.00
+foot: 5280.00”
+	1
+	ounce
+	50
+	“kg: 1.42
+gram: 1417.47
+pounds: 3.12
+ounce: 50.00”
+	
+
+
+
+# 2
+public static String removeComments(String input, char boundary)
+	
+
+You decided to write an email to your instructor but then you realized that the email is too long and you need to shorten it by removing unnecessary comments wrapped by boundary characters (Eg: parentheses). Write a function that takes two parameters: a text and a boundary character indicating the text to be removed, and returns an output string with comments deleted. Unnecessary comments are substrings wrapped by boundary characters (including the boundary character itself). 
+
+
+Note: 
+1. If there’s no boundary characters within the input, the output will be the same as the input, as no text is being deleted.
+2. It is guaranteed that boundary characters will always come in pairs. One does not need to consider odd numbers of boundary characters.
+
+
+Examples: 
+Input text
+	Boundary Character
+	Output
+	“Dear instructors, my name is Harry Potter and I was wondering if masks were required during quidditch *I need to be able to cast a spell during the game*”
+	*
+	“Dear instructors, my name is Harry Potter and I was wondering if masks were required during quidditch “
+	“DSC30, a course that teaches data structure, is essential in understanding the field of computer science”
+	,
+	“DSC30 is essential in understanding the field of computer science”
+	“First week of class. Super Excited !!!”
+	(
+	“First week of class. Super Excited !!!”
+	
+
+
+
+# 3
+public static String calculateTime(String startTime, int[] intervals)
+	
+
+You are getting ready to come to the first class but the parking situation at UCSD is not great. Therefore, your best bet is to take the trolley. You know the time when the trolley leaves the station, number of stations and the time needed between these stations. Write a function that takes this information and returns a string that describes the timetable of the trolley - the trolley’s arrival time at each station, starting from the first station
+
+
+The function takes in two parameters:
+1. startTime: The startime of the train, in military time (Eg: “07:00”)
+2. intervals: An array of time intervals that the trolley undergoes from station to station
+   1. Eg: [4, 10, 3] indicates that it takes 4 minutes to travel from the start station to station 1, 10 minutes to travel from station 1 to station 2, and 3 minutes to travel from station 2 to station 3.
+      1. If the startTIme is 07:00, the trolley leaves the first station at 07:00. It takes 4 minutes to reach the second station, arriving at 07:04. Then, it takes another 10 minutes to arrive at the third station, arriving at 07:14. Lastly, it takes another 3 minutes to reach the terminal station, which is 07:17.
+
+
+Note: 
+1. Military time has the following attributes
+   1. If the minute or hour value is less than 10, you need to add a preceding zero to the value. Military time always has its minutes and hours value as two digits.
+   2. The hour value is within the range of [0,23], not [0,12]. 
+2. You are not allowed to use java packages other than java.Lang for this problem.
+3. There is no trailing newline character(‘\n’) at the end of the string
+
+
+
+
+Examples: 
+startTime
+	intervals
+	Output
+	Explanation
+	“07:00”
+	[4,10,3]
+	“07:00
+07:04
+07:14
+07:17”
+
+
+	07:00+00:04=07:04
+07:04+00:10=07:14
+07:14+00:03=07:17
+
+
+	“23:57”
+	[4,57,60,35]
+	“23:57
+00:01
+00:58
+01:58
+02:33”
+	23:57+00:04=00:01
+00:01+00:57=00:58
+00:58+00:60=01:58
+01:58+00:35=02:33
+	“12:55”
+	[5,10,20,40]
+	“12:55
+13:00
+13:10
+13:30
+14:10”
+	12:55+00:05=13:00
+13:00+00:10=13:10
+13:10+00:20=13:30
+13:30+00:40=14:10
+	
+
+
+
+# 4
+public static String determineSeat()
+	
+
+An important update has been made to this question. Please refer to this link for details.
+Finally you arrived at the classroom but the seat you wanted to sit on was already taken! In order to decide who will be sitting on this seat during the next class, you decided to have a battle of random numbers! The rules are:
+1. Each student writes a random integer within [0,99], inclusively
+2. Sum up the digits for the two numbers. The larger sum of digits wins
+3. If the values in (b) are the same, the shortest integer wins. The shortest integer is defined as the integer with the least amount of digits. 
+4. If still a tie, repeat the process again. 
+
+
+This method takes no parameters, simulates the randomization of numbers and battling results, and determines the winner under this rule. The method will return a String that summarizes the battle result in the format of  Eg:“You win the battle with value 55”.
+
+
+Below are the specific steps for implementation:
+1. Randomize two integers using java.util.Random (Refer to the beginning of the writeup. There is a link to the java documentation guide). The first generated integer corresponds to your randomized number, and second one corresponds to the other student’s number
+   1. When instantiating the Random object, please use with seed 1
+      1. Use the code “Random random = new Random(1)” instead of “Random random = new Random()”
+         1. The purpose of seeding is so that each time we execute the code, random numbers are yielded in the same sequence
+   2. Please use nextInt(100) to generate a random integer within [0,99]. Don’t use nextInt(). 
+2. Decide on the winner based on the rules. Repeat (a) if it is a tie. 
+3. Output a string that describes the battling result
+   1. Formats in “You win the battle with value your_number” if you win
+   2. Formats in “The other student wins the battle with value other_number” if the other student wins
+
+
+
+
+
+
+Examples: 
+Scenarios
+	Output
+	num1=85, num2=90
+	“You win the battle with value 85”
+	num1=12, num2=56
+	“The other student wins the battle with value 56”
+	num1=78, num2=87(Repeat again)
+num1=30, num2=30(Repeat again)
+num1=19, num2=3
+
+
+	“You win the battle with value 19”
+	
+
+# 5
+public static String processTransfer (int amount)
+	
+
+Bob goes to the bank with x amount of money. As every other bank, there is a transaction fee for deposit. This bank operates in the following way:
+1. For every $100 transaction, you need to pay $7 transaction fee
+2. For the remaining fee (<$100), you have to also pay $7 transaction fee
+   1. If the remaining fee is unable to pay the transaction fee, then that remaining fee wouldn’t be deposited. (Eg: you can’t deposit $3 into the bank because it requires a $7 transaction fee)
+
+
+If Bob wants to deposit $125, then for the first $100, he is charged a $7 transaction fee. $7 is deducted from the remaining $25 due to the previous transaction fee. For $18, he is charged another $7, due to rule(b). In the end, he can only deposit $100+$11=$111. Meanwhile, the transaction fee is $7(transaction fee from (a)) + $7 (transaction fee from (b)) = $14.
+
+
+Your task is to assist Bob in calculating the maximum amount of money to be transferred as well as the transaction fee involved. 
+
+
+
+
+Examples: 
+
+
+amount
+	Output
+	10
+	“Max amount: 3, transaction fee is 7”
+	108
+	“Max amount: 100, transaction fee is 7”
+
+
+(NOT IN THE OUTPUT: 1 dollar is not transferred, because if this 1 dollar is transferred, the transaction fee becomes $14, which makes the required amount larger than $108) 
+	343
+
+
+	“Max amount: 315, transaction fee is 28”
+	
+
+
+
+# 6
+public static String decompressString(String input)
+	
+
+Professor Marina doesn’t like to see adjacent characters with the same alphabet within a string. To not trigger the professor, tutors have encoded strings with the use of integers and parentheses. The number wrapped in the parenthesis indicates the number of repetitions of the preceding character.  Eg:The word “room” is encrypted as “ro(2)m”. Your task will be to decompress the encrypted string and figure out the “secret message” the tutors intended to tell you. The function will expand the string and then return the decompressed message. 
+
+
+Note: Characters within the parentheses are guaranteed to be digits. There is no need to consider invalid inputs, such as “t(k)o”.
+
+
+Examples: 
+
+
+Input
+	Output
+	“DSC30 is entertainin(4)g, and tutors are pas(2)ionate to help students”
+	“DSC30 is entertaininnnng, and tutors are passionate to help students.”
+
+
+	“HW’s are to(2) hard(6)”
+	“HW’s are too hardddddd”
+
+
+	“Start your hw early and often”
+(No encoding exists within the input)
+	“Start your hw early and often”
+
+
+	
+
+
+
+# 7
+public static String summarizeResponse(String[] namesArray, boolean[][] responses)
+	
+
+To ensure classroom safety during this fall, a course instructor decided to collect mandatory questionnaire responses from their students in the morning of each lecture day. They plan to use the responses to guide each student on whether they should stay home and to check on the overall classroom status. students-0921.txt has the student responses collected on September 21st. On the txt file, each row has each student’s responses. Each response has multiple fields, represented as below.
+
+
+field
+	name
+	cough
+	Shortness of breath
+	Fever above 99.2F
+	Loss of taste or smell
+	Muscle ache
+	Fatigue
+	datatype
+	String
+	boolean
+	
+
+The input file is being preprocessed in the main() method by helper methods. You’ll be using the following two variables in the main method:
+1. namesArray: This array stores the students’ names. 
+2. respArr: This 2D array stores boolean values that indicates whether a student has a certain symptom
+   1. Row i within respArr corresponds to the responses for student i (within namesArray)
+   2. For example, row 0 in student-0921.txt corresponds to Marina’s responses, because “Marina” is at index 0 of namesArray. To check whether Marina has fever, you look at respArr[0][2], because fever corresponds to index 2 within the row. 
+
+
+Students must stay home if they have at least 3 symptoms. Your job is to write a java program which finds out who needs to stay home and how many symptoms the class has on average. The method takes a names array and a 2D boolean array, each row representing a student entry(see above table). It will return a String that summarizes the responses in the following format:
+
+
+“(number of students staying home)/(total number of students) should stay home.
+The names are X, Y, …, and Z.
+On this date, the students reported x.y symptoms on average.” (round to 1 decimal place)
+
+
+Note: 
+1. If there is no one staying home, the second sentence becomes “The names are none. ”
+2. If there is only one person staying home, the second sentence becomes “The names are X. “
+   1. Don’t alter the subjects and verbs based on subject-verb agreement for the second sentence. Use plural as default
+   2. There is no “and” within the sentence. 
+3. If there is 2 people staying home, the second sentence becomes “The names are X, and Y”. 
+4. To test the results, simply run the main() method. Desired output shown below:
+
+
+Example Output(Based on students-0921.txt)
+4/10 students should stay home. 
+The names are Soohyun, Jerry, Brian, and Jeffrey.
+On this date, the students reported 2.5 symptoms on average.
+
+
+Example Output(Based on students-0922.txt)
+6/17 students should stay home. 
+The names are Soohyun, Jerry, Brian, Jeffrey, StudentA, and StudentF.
+On this date, the students reported 2.4 symptoms on average.
+
+
+Example Output(Based on students-0923.txt)
+1/10 students should stay home. 
+The names are Marina.
+On this date, the students reported 1.6 symptoms on average.
+
+
+
+
+
+
+Submission
+Files to Submit
+* HelloWorld.java (see github setup guide for more details)
+* Startup.java
+Instructions for Submission  
+Once you finish your assignment, you should commit and push your code to Github first.
+
+
+Then log into Gradescope, and select our course DSC30. On the class dashboard, select the current assignment PA1. 
+
+
+Upon clicking the assignment, a window will prompt for the submission method to select. Select GitHub as your submission method. (Note that we only keep the Upload submission method in the first PA in case you have problems using Github. Starting from next PA, we will disable the upload method and leave only Github as the submission method) Then click Connect to GitHub. Now log in to your Github account and click Authorize gradescope.
+
+
+  
+
+
+
+Select your private repository dsc30-pa1 as the REPOSITORY, and main as the BRANCH. Then click Upload.
+
+
+A notification window will display once your files have been submitted.
+
+
+Important: Please ensure that you see the following successful submission message under Autograder Results. If you see any other output, your submission is NOT successful. Check the submission error messages in the next section. If you need assistance or see anything unusual, please ask one of the staff or post on Piazza.
+
+
+  
+
+Submission Error Messages
+In a partial or incomplete submission you may receive the following error messages:
+
+
+* SUBMISSION FAILED. THE FOLLOWING FILES DO NOT EXIST
+   * If you see this, make sure that you have submitted all of your .java files required for this assignment. 
+
+   * SUBMISSION FAILED. FILES DO NOT COMPILE.
+   * Seeing this message means that there are compilation errors in your code. Check the error output and debug these errors before continuing.
+
+      * SUBMISSION FAILED. FILES DO NOT COMPILE WITH TESTING CODE.
+      * At least one of your method signatures is not consistent with the write-up. The error output will specify the lines corresponding to incorrect method signature.
+
+
+Let us know if you see any other error messages.
