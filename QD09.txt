@@ -1,0 +1,5 @@
+The unique identifier should be: the first letter of your first name (capitalized) + the first letter of your last name (capitalized) + the last 2 digits of your Student ID (PID).
+For example, John Smith - A12345678 should submit 'JS78.txt'.
+The contents of this file do not matter (it can be empty).
+
+Copied from instructions on LAB.
