@@ -1,0 +1,1 @@
+My identifier is: the first letter of my first name (capitalized) + the first letter of my last name (capitalized) + the last 2 digits of my Student ID (PID).
