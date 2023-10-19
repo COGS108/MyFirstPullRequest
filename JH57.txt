@@ -1,0 +1,1 @@
+For example, John Smith - A12345678 should submit 'JS78.txt'.
