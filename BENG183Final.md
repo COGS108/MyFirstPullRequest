@@ -22,7 +22,7 @@ Nonetheless, the precision and sensitivity of RNA-seq make it an invaluable tool
 ### **RNA-Sequencing Pipeline**
 
 
-#### **	Quality Control/Mapping**
+#### **Quality Control/Mapping**
 
 RNA sequencing has a broad variety of applications however the pipeline is very similar. First, the reads have to be checked for quality and be cleaned. For this step, reads have to be fed into the FastQC command which generates an html report of the quality of the reads. Quality is measured by many metrics such as sequence quality, GC content, and library complexity. Each metric is labeled as pass or fail so a good set of reads should pass most of the metrics. The next step is to trim the reads using Trim Galore to trim off adapter sequences to get better alignments later in the pipeline. From there the reads are mapped to the reference genome using STAR with the trimmed fastq files as input. After that featureCounts is used to count the reads that fall in the annotated segments. featureCounts creates a bam file that can be opened using samtools to observe the aligned regions.
 
@@ -45,7 +45,7 @@ _An example of a FastQC report with a summary of the metrics indicating pass and
 _([https://hbctraining.github.io/Intro-to-rnaseq-hpc-salmon-flipped/lessons/07_qc_fastqc_assessment.html](https://hbctraining.github.io/Intro-to-rnaseq-hpc-salmon-flipped/lessons/07_qc_fastqc_assessment.html))_
 
 
-#### **	Differential Sequencing Analysis**
+#### **Differential Sequencing Analysis**
 
 Given that information, differential sequence analysis can be performed to observe gene expression of the regions of interest. DeSeq2 is an R package that is used to carry out this analysis but as a precondition, genes with low counts should be filtered out as they would not be expressed and increase the runtime unnecessarily. A few other alternative packages are edgeR and Limma. After differential sequence analysis, functional enrichment is performed to determine if other genes are enriched in another set. This can help determine biological function through similarity in genes. 
 
