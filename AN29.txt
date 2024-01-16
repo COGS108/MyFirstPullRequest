@@ -1,1 +1,1 @@
-This is a empty file .. wait its not HAHA
+This is a empty file .. wait its not HAHA... why use VIM when I can just edit directly using vscode text editor LOL 
