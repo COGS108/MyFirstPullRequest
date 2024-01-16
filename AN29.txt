@@ -2,3 +2,4 @@ This is a empty file .. wait its not HAHA... why use VIM when I can just edit di
 Adding some edits to do a git pull to my local machine 
 I actually did a git fetch, then a git merge 
 Let me try again using a git pull, I am assuming it would combine the two steps into one step. 
+Here is more editing I am doing on vim via vim AN29.txt using 'a' command followed by :wq 
