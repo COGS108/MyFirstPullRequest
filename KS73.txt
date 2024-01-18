@@ -1,1 +1,1 @@
-touch KS73.txt
+KS73.txt
