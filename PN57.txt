@@ -1,0 +1,7 @@
+PN57
+
+# first letter of first name (caps)
+# first letter of last name (caps)
+# last 2 digits of PID
+
+i hope im doin this right
