@@ -1,0 +1,4 @@
+Hello, I'm Ada!
+I've worked with Jupyter before, having read a little on and practiced
+cleaning public data sets and building supervised machine learning
+models that used them! Super excited to learn more in this class!
